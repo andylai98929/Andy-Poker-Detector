@@ -5,7 +5,7 @@ public class Player {
 
     private Card[] hands ;
 
-    private CardPattern pattern;
+    private CardPatternType pattern;
 
     public String getName() {
         return name;
@@ -23,17 +23,17 @@ public class Player {
         this.hands = hands;
     }
 
-    public CardPattern getPattern() {
+    public CardPatternType getPattern() {
         return pattern;
     }
 
-    public void setPattern(CardPattern pattern) {
+    public void setPattern(CardPatternType pattern) {
         this.pattern = pattern;
     }
 
     public Player(String name, Card[] hands) {
         this.name = name;
         this.hands = hands;
-//        this.pattern = NO_PATTERN;
+        this.pattern = CardPatternType.HIGH_CARD;
     }
 }

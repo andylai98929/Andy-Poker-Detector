@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Deck {
-    private List<Card> cards;
+    private final List<Card> cards;
 
     public Deck(List<Card> cards) {
         this.cards = cards;
@@ -23,7 +23,6 @@ public class Deck {
         if (cards.isEmpty()){
             throw new IllegalStateException("Deck is Empty");
         }
-        shuffle();
         return cards.remove(0);
     }
 

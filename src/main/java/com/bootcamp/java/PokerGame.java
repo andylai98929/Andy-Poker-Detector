@@ -5,9 +5,11 @@ import java.util.Arrays;
 public class PokerGame {
     private int numberOfPlayer;
 
+    private CardPatternType patternType;
+
     private static final int MAX_NUM_OF_CARDS_PER_HAND =2;
 
-    private Card[] commonCards;
+    private Card[] board;
 
     private Player[] players;
 
