@@ -68,7 +68,7 @@ public class Card implements Comparable<Card>{
 //    {
 //        System.out.println( "Hello World!" );
 //    }
-    enum Suit{
+    public enum Suit{
         SPADE(4),
         HEART(3),
         CLUB(2),
@@ -85,7 +85,7 @@ public class Card implements Comparable<Card>{
         }
     }
 
-    enum Rank{
+    public enum Rank{
         ACE(14),
         KING(13),
         QUEEN(12),

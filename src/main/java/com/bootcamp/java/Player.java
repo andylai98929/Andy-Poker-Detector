@@ -3,7 +3,7 @@ package com.bootcamp.java;
 public class Player {
     private String name;
 
-    private Card[] hands ;
+    private final Card[] hands ;
 
     private CardPatternType pattern;
 
@@ -19,9 +19,9 @@ public class Player {
         return hands;
     }
 
-    public void setHands(Card[] hands) {
-        this.hands = hands;
-    }
+//    public void setHands(Card[] hands) {
+//        this.hands = hands;
+//    }
 
     public CardPatternType getPattern() {
         return pattern;
