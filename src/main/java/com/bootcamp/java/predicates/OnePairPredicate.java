@@ -19,14 +19,17 @@ public class OnePairPredicate implements PatternPredicates{
 
         int countOfPairs = 0;
         for (Integer value : request.getRankCounts().values()){
-            if (value==2){
+            if (value>=2){
                 countOfPairs++;
             }
         }
-        if (countOfPairs==1){
+        if (countOfPairs>=1){
             return true;
         }
         return false;
+
+//        return request.getRankCounts().values().stream()
+//                .anyMatch(i -> i >= 2);
     }
 
     @Override

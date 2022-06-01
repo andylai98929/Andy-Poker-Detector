@@ -1,5 +1,6 @@
 package com.bootcamp.java;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
@@ -48,6 +49,13 @@ public class PokerGame {
 
         player1.setPattern(detector.detect(player1CombineArray));
         player2.setPattern(detector.detect(player2CombineArray));
+
+//        for (Player player : players) {
+//            Card[] mergedCards = Arrays.copyOf(game.getBoard(), game.getBoard().length + 2);
+//            mergedCards[mergedCards.length - 2] = player.getHands()[0];
+//            mergedCards[mergedCards.length - 1] = player.getHands()[1];
+//            player.setPattern(detector.detect(mergedCards));
+//        }
 
 
         System.out.println(player1.getPattern());

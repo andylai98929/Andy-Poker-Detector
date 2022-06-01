@@ -9,7 +9,7 @@ public class Detector {
 
 
     public Detector(PatternPredicates[] predicates) {
-        this.predicates = PredicateInitializer.predicatesInitialize();
+        this.predicates = predicates;
     }
 
     public CardPatternType detect(Card [] cards){

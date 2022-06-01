@@ -2,11 +2,11 @@ package com.bootcamp.java.predicates;
 
 import com.bootcamp.java.Card;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class PredicateRequest {
+    private static final Comparator<Card.Rank> COMPARE_BY_RANK_VALUE = Comparator.comparingInt(Card.Rank::getValue);
 
     private final Card[] cards;
 
@@ -49,5 +49,20 @@ public class PredicateRequest {
 
     public Map<Card.Suit, Integer> getSuitCounts() {
         return suitCounts;
+    }
+
+    public Card.Rank[] getSortedCardRanks() {
+        Set<Card.Rank> straightTreeSet = new TreeSet<>(COMPARE_BY_RANK_VALUE);
+//        Set<Card.Rank> straightTreeSet2 = Arrays.stream(getCards())
+//                .map(Card::getRank)
+//                .collect(Collectors.toCollection(
+//                        () -> new TreeSet<>(COMPARE_BY_RANK_VALUE)
+//                ));
+
+        for (Card card : getCards()){
+            straightTreeSet.add(card.getRank());
+        }
+
+        return straightTreeSet.toArray(Card.Rank[]::new);
     }
 }

@@ -1,10 +1,21 @@
 package com.bootcamp.java;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Deck {
     private final List<Card> cards;
+
+//    public static Deck createDeck() {
+//        List<Card> cards = new ArrayList<>(52);
+//        for (Card.Suit suit: Card.Suit.values()){
+//            for (Card.Rank rank : Card.Rank.values()){
+//                cards.add(Card.of(suit,rank));
+//            }
+//        }
+//        return new Deck(cards);
+//    }
 
     public Deck(List<Card> cards) {
         this.cards = cards;
